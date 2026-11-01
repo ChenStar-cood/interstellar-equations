@@ -1,0 +1,630 @@
+\documentclass[UTF8,11pt,a4paper]{ctexart}
+
+% ---------- 页面与字体 ----------
+\usepackage{geometry}
+\geometry{left=2.15cm,right=2.15cm,top=2.35cm,bottom=2.35cm}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black}
+\linespread{1.02}
+\setlength{\parindent}{2em}
+\setlength{\abovedisplayskip}{4.5pt plus 1pt minus 1pt}
+\setlength{\belowdisplayskip}{4.5pt plus 1pt minus 1pt}
+\setlength{\abovedisplayshortskip}{2.5pt}
+\setlength{\belowdisplayshortskip}{2.5pt}
+\allowdisplaybreaks[2]
+\setlength{\emergencystretch}{2em}
+
+% ---------- 标题格式 ----------
+\definecolor{navy}{RGB}{24,43,84}
+\definecolor{deepred}{RGB}{122,32,38}
+\renewcommand{\thesection}{第\chinese{section}部分}
+\titleformat{\section}
+  {\Large\bfseries\color{navy}}
+  {\thesection：}{0.35em}{}
+\titlespacing*{\section}{0pt}{1.25em}{0.6em}
+\titleformat{\subsection}
+  {\large\bfseries\color{deepred}}
+  {}{0em}{}
+\titlespacing*{\subsection}{0pt}{0.85em}{0.35em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{navy}时空几何、黑洞物理与虫洞拓扑}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.35pt}
+
+% ---------- 常用记号 ----------
+\newcommand{\R}{\mathcal{R}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\V}{\mathcal{V}}
+\newcommand{\I}{\mathcal{I}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\Lag}{\mathcal{L}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Area}{\operatorname{Area}}
+\newcommand{\lndet}{\operatorname{lndet}}
+\newcommand{\ext}{\operatorname*{ext}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+
+\title{\bfseries 时空几何、黑洞物理与虫洞拓扑\\[0.35em]
+\large 公式汇编}
+\author{据六幅公式截图整理}
+\date{\today}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{center}
+\parbox{0.88\linewidth}{\small
+本文档将六幅截图中的公式按主题重新编排。公式、指标与符号均依原图录入；
+为便于阅读，仅统一了数学字体、行距与分段方式，未改动公式内容。
+
+\smallskip
+\noindent\textcolor{deepred}{\bfseries 提示：}本转录稿由截图人工整理，可能有误，欢迎指正。
+}
+\end{center}
+
+\vspace{0.5em}
+
+% ======================================================================
+\section{基础时空几何与度规结构}
+
+\subsection{转动黑洞、动态球对称与膜世界度规}
+
+\begin{align*}
+ds^2
+&=-\left(1-\frac{2Mr}{\Sigma}+\frac{Q^2}{r^2}+\frac{r^2}{L^2}+\alpha\R^2\right)\dd t^2
+  +\frac{\Sigma}{\Delta}\,\dd r^2+\Sigma\,\dd\theta^2\\
+&\quad+\left(r^2+a^2+\frac{2Mra^2\sin^2\theta}{\Sigma}
+  -\frac{Q^2a^2\sin^2\theta}{r^2}\right)\sin^2\theta\,\dd\phi^2\\
+&\quad-\frac{4Mra\sin^2\theta}{\Sigma}\,\dd t\,\dd\phi
+  +\beta G^{(4)}_{\mu\nu}\,\dd x^\mu\dd x^\nu .
+\end{align*}
+
+\[
+\Sigma=r^2+a^2\cos^2\theta,\qquad
+\Delta=r^2-2Mr+a^2+Q^2+\frac{r^4}{L^2}.
+\]
+
+\[
+ds^2=-e^{2\Phi(r,t)}\dd t^2
++\left(1-\frac{b(r,t)}{r}\right)^{-1}\dd r^2
++r^2K(r,t)\left(\dd\theta^2+\sin^2\theta\,\dd\phi^2\right).
+\]
+
+\[
+\Phi(r,t)=\Phi_0(t)\left(1-\frac{r_0(t)}{r}\right)\theta\bigl(r-r_0(t)\bigr).
+\]
+
+\[
+b(r,t)=r_0(t)\left[1-\epsilon(t)\left(\frac{r_0(t)}{r}\right)^{\gamma(t)}\right].
+\]
+
+\begin{align*}
+ds^2
+&=e^{-2k|y|}\left[g^{(4)}_{\mu\nu}+h_{\mu\nu}(x,y)\right]\dd x^\mu\dd x^\nu
+  +\dd y^2+\delta(y-y_c)\Lag_{brane}\,\dd^4x .
+\end{align*}
+
+\[
+g^{(4)}_{\mu\nu}
+=\eta_{\mu\nu}+\frac{1}{M_{\mathrm{Pl}}^2}
+\int G^{(5)}_{ret}(x,y;x',0)\,
+T^{(brane)}_{\mu\nu}(x')\sqrt{-g^{(4)}}\,\dd^4x'.
+\]
+
+\[
+R_{\mu\nu}-\frac12 g_{\mu\nu}R+\Lambda g_{\mu\nu}
+=\kappa\left(T^{(m)}_{\mu\nu}+T^{(spin)}_{\mu\nu}\right).
+\]
+
+\begin{align*}
+T^{(\mathrm{spin})}_{\mu\nu}
+&=-2\Bigl(g^{\lambda\sigma}S_{\lambda\mu}{}^{\rho}S_{\sigma\nu\rho}
+  +g^{\lambda\sigma}S_{\lambda\rho\sigma}S^{\rho}{}_{\mu\nu}\\
+&\qquad+\nabla_\rho\left(S_{\mu\nu}{}^{\rho}+S_{\nu\mu}{}^{\rho}\right)\Bigr).
+\end{align*}
+
+\[
+S_{\mu\nu}^{\lambda}
+=\frac12\left(\Gamma_{\mu\nu}^{\lambda}-\Gamma_{\nu\mu}^{\lambda}\right)
+=\kappa S_{\mu\nu}^{\lambda}.
+\]
+
+\subsection{修正引力、有效作用量与场方程}
+
+\begin{align*}
+\mathcal{S}
+&=\frac{1}{\kappa_0^2}\int \R\sqrt{g}\,\dd^4x
+ +\gamma_0\int \R^2\sqrt{g}\,\dd^4x
+ +\delta_0\int \R_{\mu\nu}\R^{\mu\nu}\sqrt{g}\,\dd^4x\\
+&\quad+\int\left(\frac{1}{2\kappa_0^2}\R
+ +\alpha_0 C_{\mu\nu\rho\sigma}C^{\mu\nu\rho\sigma}
+ +\tau_0 \R\,{}^{*}\R^{*}\right)\sqrt{g}\,\dd^4x
+ +\Tr\left(f\left(\frac{D_A}{\Lambda}\right)\right).
+\end{align*}
+
+\[
+D_A=\ii\gamma^\mu\left(\nabla_\mu^{(S)}+A_\mu\right).
+\]
+
+\[
+\Lag_{DE}
+=\frac12 g^{\mu\nu}\partial_\mu\phi\,\partial_\nu\phi-V(\phi)
+-\frac14 f(\phi)F_{\mu\nu}F^{\mu\nu}
+-\frac12\beta(\phi)g^{\mu\nu}\partial_\mu\psi\,\partial_\nu\psi .
+\]
+
+\[
+V(\phi)=V_0\left[1+\sum_{n=1}^{\infty}v_n
+\left(\frac{\phi}{M_{\mathrm{Pl}}}\right)^n\right]
+e^{-\lambda\phi/M_{\mathrm{Pl}}}.
+\]
+
+\[
+\Box\phi=V_{,\phi}+\frac14 f_{,\phi}F_{\mu\nu}F^{\mu\nu}
++\frac12\beta_{,\phi}(\partial\psi)^2 .
+\]
+
+\begin{align*}
+f(R,\G)
+&=R+\alpha R^2+\beta\G+\gamma R\G
+ +\delta\frac{\G^2}{R^2}+\epsilon R^3
+ +\zeta\frac{\nabla_\mu R\,\nabla^\mu R}{R}.
+\end{align*}
+
+\begin{align*}
+&f_R R_{\mu\nu}-\frac12 f g_{\mu\nu}
+-\left(\nabla_\mu\nabla_\nu-g_{\mu\nu}\Box\right)f_R\\
+&\quad-2f_{\G}RR_{\mu\nu}
++4f_{\G}R_{\mu\rho}R_\nu{}^{\rho}
+-2f_{\G}R_{\mu\rho\sigma\tau}R_\nu{}^{\rho\sigma\tau}\\
+&\quad-4f_{\G}R_{\mu\rho\nu\sigma}R^{\rho\sigma}
++2\left(\nabla_\mu\nabla_\nu f_{\G}\right)R
+-2g_{\mu\nu}\left(\Box f_{\G}\right)R
+-4\left(\nabla_\rho\nabla_\mu f_{\G}\right)R_\nu{}^{\rho}\\
+&\quad-4\left(\nabla_\rho\nabla_\nu f_{\G}\right)R_\mu{}^{\rho}
++4\left(\Box f_{\G}\right)R_{\mu\nu}
++4g_{\mu\nu}\left(\nabla_\rho\nabla_\sigma f_{\G}\right)R^{\rho\sigma}
+=\kappa T_{\mu\nu}.
+\end{align*}
+
+\subsection{色散关系与量子引力修正}
+
+\[
+ds^2=-\left(1-\frac{2m(v)}{r}+\frac{q(v)^2}{r^2}
+-\frac{Q(v)^2}{r^3}\right)\dd v^2
++2\,\dd v\,\dd r+r^2\,\dd\Omega^2.
+\]
+
+\[
+\frac{\dd m}{\dd v}
+=-\frac{\N}{2\pi}\int_0^\infty
+\frac{\omega\,\dd\omega}{e^{2\pi\omega/\kappa(v)}-(-1)^{2s}}
++\mathcal{O}(\hbar^2).
+\]
+
+\[
+\kappa(v)=\frac{r_+(v)-r_-(v)}{2r_+^2(v)}.
+\]
+
+\begin{align*}
+ds^2
+&=-\frac{\Delta}{\rho^2}
+\left[\dd t-\left(2n\cos\theta-a\sin^2\theta\right)\dd\phi\right]^2
++\frac{\rho^2}{\Delta}\,\dd r^2+\rho^2\,\dd\theta^2\\
+&\quad+\frac{\sin^2\theta}{\rho^2}
+\left[a\,\dd t-\left(r^2+a^2+n^2\right)\dd\phi\right]^2 .
+\end{align*}
+
+\[
+\Delta=r^2-2Mr+a^2-n^2+e^2+g^2,\qquad
+\rho^2=r^2+(n+a\cos\theta)^2.
+\]
+
+\[
+\omega^2=k^2+m^2+\sum_{n=1}^{N}\alpha_n
+\left(\frac{k}{M_{\mathrm{QG}}}\right)^{2n+2}k^2 .
+\]
+
+\[
+v_g=\frac{\dd\omega}{\dd k}
+=\frac{k}{\omega}\left[1+\sum_{n=1}^{N}\alpha_n(n+1)
+\left(\frac{k}{M_{\mathrm{QG}}}\right)^{2n+2}\right].
+\]
+
+\[
+\lim_{k\to\infty}v_g=\lim_{k\to\infty}\frac{\dd\omega}{\dd k}\le 1.
+\]
+
+% ======================================================================
+\section{黑洞物理学与吸积盘动力学}
+
+\subsection{相对论磁流体与吸积盘结构}
+
+\[
+\nabla_\mu(\rho u^\mu)=0,
+\]
+
+\begin{align*}
+(\rho+p+|b|^2)u^\nu\nabla_\nu u_\mu
+&=-\nabla_\mu\left(p+\frac12|b|^2\right)+b^\nu\nabla_\nu b_\mu\\
+&\quad+(\nabla_\nu u^\nu)b_\nu b_\mu
+-u_\mu b^\nu u^\lambda\nabla_\lambda b_\nu .
+\end{align*}
+
+\[
+\nabla_\nu\left(b^\mu u^\nu-b^\nu u^\mu\right)=0,\qquad
+b^\mu u_\mu=0.
+\]
+
+\[
+\nabla_\mu\left[(\rho+p+|b|^2)u^\mu-b^\mu(b_\nu u^\nu)\right]
+=-u^\mu\nabla_\mu p+\Phi_{rad}-\Lambda_{cool}.
+\]
+
+\[
+\dot M=-2\pi r\Sigma\Delta^{1/2}\frac{v_r^{(r)}}{\A}.
+\]
+
+\[
+\frac{\partial\Sigma}{\partial t}
++\frac1r\frac{\partial}{\partial r}\left(r\Sigma v_r\right)
+=\dot\Sigma_{infall}-\dot\Sigma_{wind}.
+\]
+
+\[
+T_{r\phi}=\nu\Sigma r^2\frac{\dd\Omega}{\dd r}\A^2,
+\qquad
+\nu=\alpha c_sH.
+\]
+
+\[
+F_{rad}(r)=\frac{3GM\dot M}{8\pi r^3}\B^{-1}\C,
+\qquad
+\B=1-\sqrt{\frac{r_{ISCO}}{r}}.
+\]
+
+\[
+u^r=\pm\sqrt{\V_{eff}(r;b,q)},\qquad
+u^\theta=\pm\sqrt{\Theta(\theta;b,q)}.
+\]
+
+\begin{align*}
+\V_{eff}
+&=\frac{1}{\Delta}\Bigl[E^2(r^2+a^2)^2
+-\Delta\left(Q+(Ea-L_z)^2\right)
+-4MraE(Ea-L_z)\Bigr].
+\end{align*}
+
+\[
+\Theta=Q-\cos^2\theta\left[a^2(1-E^2)
++\frac{L_z^2}{\sin^2\theta}\right].
+\]
+
+\[
+x=-\frac{b}{\sin\theta_{obs}},\qquad
+y=\pm\sqrt{q+a^2\cos^2\theta_{obs}
+-b^2\cot^2\theta_{obs}}.
+\]
+
+\subsection{黑洞能量提取、热力学与微观态}
+
+\[
+\eta_{Penrose}=\frac{E_{out}-E_{in}}{E_{in}}
+=\frac{\Omega_HL_z-E}{E}.
+\]
+
+\[
+\omega<m\Omega_H,\qquad
+\Omega_H=\frac{a}{r_+^2+a^2}.
+\]
+
+\[
+Z_{slm}=\frac{\Gamma_{slm}}{e^{\beta_H(\omega-m\Omega_H)}-1},
+\qquad
+\Gamma_{slm}=1-|R_{slm}|^2.
+\]
+
+\[
+\mathfrak{J}(\omega)
+=\frac{M\omega}{2}\left(\frac{r_+-r_-}{r_+}\right)
+\left(\frac{\omega-m\Omega_H}{2\pi T_H}\right)|\Gamma_{slm}|.
+\]
+
+\[
+\dd M=T_H\,\dd S_{BH}+\Omega_H\,\dd J+\Phi_H\,\dd Q
++\sigma_H\,\dd\A+\sum_i\mu_i\,\dd N_i+\theta_H\,\dd\C.
+\]
+
+\[
+T_H=\frac{\kappa}{2\pi}=\frac{r_+-r_-}{4\pi(r_+^2+a^2)},
+\qquad
+S_{BH}=\frac{\A}{4}=\pi(r_+^2+a^2).
+\]
+
+\[
+\mu_i=\left.\frac{\partial M}{\partial N_i}\right|_{S,J,Q,\A,\C}.
+\]
+
+\[
+S_A=\frac{\Area(\gamma_A)}{4G_N^{(d+1)}}+S_{bulk}
++\sum_{n=1}^{\infty}c_n\left(\frac{\R_{\gamma_A}}{L^2}\right)^n.
+\]
+
+\subsection{时空聚焦、半经典稳定性与卡西米尔效应}
+
+\[
+\frac{\dd\theta}{\dd\lambda}
+=-\frac12\theta^2-\sigma_{\mu\nu}\sigma^{\mu\nu}
++\omega_{\mu\nu}\omega^{\mu\nu}-R_{\mu\nu}k^\mu k^\nu.
+\]
+
+\[
+\theta=\frac1A\frac{\dd A}{\dd\lambda}=0
+\;\Longrightarrow\;
+R_{\mu\nu}k^\mu k^\nu=-\sigma^2+\omega^2<0.
+\]
+
+\[
+T_{\mu\nu}k^\mu k^\nu<0
+\;\Longrightarrow\;
+\rho+p_r<0.
+\]
+
+\[
+\left.\frac{\delta^2S}{\delta\phi^2}\right|_{wh}<0.
+\]
+
+\[
+\left(\Box-\xi R-m^2-V''(\phi_{wh})\right)\delta\phi=0.
+\]
+
+\[
+\omega_n=\omega_R+\ii\omega_I,\qquad
+\tau_{lifetime}\sim\frac{1}{|\omega_I|}.
+\]
+
+\begin{align*}
+&\left[-G_{ijkl}\frac{\delta^2}{\delta h_{ij}\delta h_{kl}}
+-\sqrt{h}\left({}^{(3)}R-2\Lambda+\Lag_{matter}\right)\right]
+\Psi[h_{ij},\phi]=0.
+\end{align*}
+
+\[
+G_{ijkl}=\frac{1}{2\sqrt{h}}
+\left(h_{ik}h_{jl}+h_{il}h_{jk}-h_{ij}h_{kl}\right).
+\]
+
+\[
+\Psi[h_{ij}\to\infty]\sim e^{\ii S_{classical}}.
+\]
+
+\[
+\langle T_{\mu\nu}\rangle_{ren}
+=\frac{\pi^2}{1440a^4}
+\begin{pmatrix}
+-1&0&0&0\\
+0&1&0&0\\
+0&0&1&0\\
+0&0&0&-3
+\end{pmatrix}.
+\]
+
+\[
+E_{Casimir}=-\frac{\pi^3\hbar c}{720}\frac{R}{a^3}.
+\]
+
+\[
+\left.\frac{\partial^2E_{total}}{\partial a^2}\right|_{a_0}>0,
+\qquad
+E_{total}=E_{Casimir}+E_{self}+E_{grav}.
+\]
+
+\subsection{膜世界、欧氏作用量与 ER=EPR}
+
+\[
+ds^2=e^{-2k|y|}\eta_{\mu\nu}\dd x^\mu\dd x^\nu+\dd y^2.
+\]
+
+\[
+G_{AB}^{(5)}=-\Lambda_5g_{AB}^{(5)}
++\kappa_5^2T_{AB}^{(brane)}\delta(y).
+\]
+
+\[
+a(y)=\frac1k\cosh(ky),\qquad
+k^2=-\frac{\Lambda_5}{6}.
+\]
+
+\[
+\Gamma\sim e^{-S_E},\qquad
+S_E=\int_0^\beta\dd\tau\int\dd^3x\sqrt{g_E}
+\left(\Lag_E+\Lag_{GHY}\right).
+\]
+
+\begin{align*}
+S_E
+&=-\frac{1}{16\pi G}\int_{\M}\dd^4x\sqrt{g}\,\R
+-\frac{1}{8\pi G}\int_{\partial\M}\dd^3x\sqrt{h}\,K
++S_{matter}.
+\end{align*}
+
+\[
+ds_E^2=\left(1+\frac{r_0^2}{r^2}\right)\dd r^2
++r^2\,\dd\Omega_3^2.
+\]
+
+\[
+|\Psi\rangle_{EPR}
+=\frac{1}{\sqrt{Z}}\sum_i e^{-\beta E_i/2}|i\rangle_L\otimes|i\rangle_R
+\quad\Longleftrightarrow\quad \text{ER bridge}.
+\]
+
+\subsection{量子校正黑洞、Page 曲线与 Teukolsky 方程}
+
+\[
+\frac{\delta}{\delta X^\mu(\sigma)}
+\left[\int_\gamma\dd^d\sigma\sqrt{h}
++\lambda\int_\gamma\dd^d\sigma K\right]=0.
+\]
+
+\[
+S_A^{(1-\mathrm{loop})}
+=-\Tr\left[\rho_A\ln\rho_A\right]
++\frac12\lndet\left(-\nabla_\gamma^2+\R/6\right).
+\]
+
+\[
+S_{Page}(t)=\min\left(S_{BH}(t),S_{rad}(t)\right).
+\]
+
+\[
+S_{fine}=-\Tr\left(\rho_{rad}\ln\rho_{rad}\right)
+=S_{coarse}-S_{island}.
+\]
+
+\[
+S(\rho_{rad})
+=\min_{\I}\ext_{\I}
+\left[\frac{\Area(\partial\I)}{4G_N}
++S_{bulk}(\I\cup rad)\right].
+\]
+
+\begin{align*}
+&\Delta^{-s}\frac{\dd}{\dd r}
+\left(\Delta^{s+1}\frac{\dd R}{\dd r}\right)
++\left[\frac{K^2-2\ii s(r-M)K}{\Delta}
++4\ii s\omega r-\lambda\right]R=0.
+\end{align*}
+
+\begin{align*}
+&\frac{1}{\sin\theta}\frac{\dd}{\dd\theta}
+\left(\sin\theta\frac{\dd S}{\dd\theta}\right)
++\Biggl[a^2\omega^2\cos^2\theta-\frac{m^2}{\sin^2\theta}
+-2a\omega s\cos\theta\\
+&\qquad-\frac{2ms\cos\theta}{\sin^2\theta}
+-s^2\cot^2\theta+s+A_{slm}\Biggr]S=0.
+\end{align*}
+
+\[
+K=(r^2+a^2)\omega-am,\qquad
+\lambda=A_{slm}+a^2\omega^2-2am\omega.
+\]
+
+\subsection{轨道能量损失、黑洞自旋与无力电磁场}
+
+\[
+\frac{\dd E}{\dd t}
+=\left(\frac{\dd E}{\dd t}\right)_{GW}
++\left(\frac{\dd E}{\dd t}\right)_{SC}
++\left(\frac{\dd E}{\dd t}\right)_{tidal}.
+\]
+
+\[
+\left\langle\frac{\dd E}{\dd t}\right\rangle_{GW}
+=-\frac{32}{5}\frac{\mu^2}{M^2}\left(\frac{M}{p}\right)^5
+(1-e^2)^{7/2}
+\left[1+\frac{73}{24}e^2+\frac{37}{96}e^4\right].
+\]
+
+\[
+\frac{\dd\vec S}{\dd t}
+=\frac{2G}{c^2r^3}\left[\vec L_N\times\vec S
++\frac{3GM}{c^2r}\left(\hat L_N\cdot\vec S\right)
+\left(\hat L_N\times\vec S\right)\right].
+\]
+
+\[
+P_{BZ}=\frac{\kappa}{4\pi}\Phi_{BH}^2\Omega_H^2f(\Omega_H).
+\]
+
+\[
+\Phi_{BH}=\frac12\int_{BH}|B^r|\,\dd A=\pi r_+^2B_0.
+\]
+
+\[
+\vec E+\vec v\times\vec B=0,\qquad
+\rho_e\vec E+\vec j\times\vec B=0.
+\]
+
+\[
+J^\mu=\frac{1}{4\pi}\nabla_\nu F^{\mu\nu}
+=\frac{I(\Psi)}{2\pi\sqrt{-g}}\delta(\Psi-\Psi_0)
+(\partial_\nu\Psi)\epsilon^{\mu\nu\rho\sigma}F_{\rho\sigma}.
+\]
+
+% ======================================================================
+\section{虫洞物理学与时空拓扑}
+
+\subsection{虫洞几何与能量条件}
+
+\[
+b(r_0)=r_0,\qquad b'(r_0)<1,\qquad
+\frac{b(r)-b'(r)r}{2b^2(r)}>0.
+\]
+
+\[
+\frac{\rho(r)-\tau(r)}{c^2}
+=\frac{1}{8\pi Gr_0^2}|b'(r_0)-1|<0.
+\]
+
+\[
+\oint\left(\rho-\sum_i p_i\right)\dd V
+=-\frac{c^4}{G}\oint K\,\dd A<0.
+\]
+
+\subsection{全息纠缠、SYK 模型与虫洞有效理论}
+
+\[
+S_{ent}=\frac{\Area(\Sigma)}{4G_N}=S_{thermo}.
+\]
+
+\[
+\rho_{code}=\Tr_{env}\left(|\Psi_{ER}\rangle\langle\Psi_{ER}|\right),
+\qquad S(\rho_{code})=0.
+\]
+
+\[
+H=\sum_{1\le i<j<k<l\le N}J_{ijkl}\chi_i\chi_j\chi_k\chi_l,
+\qquad
+\langle J_{ijkl}^2\rangle=\frac{3!\,J^2}{N^3}.
+\]
+
+\[
+G(t_1,t_2)=\frac1N\sum_i\langle\chi_i(t_1)\chi_i(t_2)\rangle
+=\frac{b}{\left[\dfrac{\sin(\pi t_{12}/\beta)}{\pi/\beta}\right]^{2\Delta}}.
+\]
+
+\[
+S=-\frac{C}{2}\int\dd\tau
+\left[\tan\frac{\pi\tau}{\beta},t(\tau)\right]
++\mu\int\dd\tau\cos\left(\frac{2\pi t(\tau)}{\beta}\right).
+\]
+
+\[
+\Phi_{out}(t)=\oint K(t,t')\Phi_{in}(t')\,\dd t'
++\int_{wh}G_{ret}(t,t'')J(t'')\,\dd t''.
+\]
+
+\[
+\Phi(t)=\Phi_{in}(t)
++\int_{-\infty}^{t}G_{ret}(t,t')\rho\left[\Phi(t')\right]\dd t'.
+\]
+
+\[
+\rho_{wh}(t)=\delta(t-t_{entry})
+\delta^3\left(\vec x-\vec x_{wh}\right)\Phi(t_{exit}).
+\]
+
+\end{document}

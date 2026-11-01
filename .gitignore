@@ -1,0 +1,62 @@
+# ---------- LaTeX build artifacts ----------
+# XeLaTeX / pdfLaTeX / LuaLaTeX intermediate files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.bcf
+*.run.xml
+*.blg
+*.brf
+
+# BibTeX / Biber
+*.bbl
+*.bib.bak
+
+# Index / glossaries
+*.idx
+*.ind
+*.ilg
+*.glo
+*.gls
+*.ist
+
+# SyncTeX
+*.synctex
+*.synctex.gz
+*.synctex(busy)
+*.synctex.gz(busy)
+
+# minted / externalization caches
+_minted-*/
+*.pyg
+*-figure*/
+*.md5
+*.loa
+
+# ---------- Other build products ----------
+# Compiler output directories (latexmk -outdir, VS Code LaTeX Workshop)
+/_build/
+/build/
+/out/
+
+# ---------- Local previews ----------
+/preview/
+/preview-en/
+
+# ---------- OS and editor files ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
